@@ -20,7 +20,7 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--dark-text);
       background-color: var(--light-bg);
       line-height: 1.6;
@@ -37,16 +37,33 @@
     }
 
     header img {
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 40px;
     }
-
+    .header-hero-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .header-list {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .header-list p {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--dark-text);
+      padding-top: 10px;
+      border-top: 2px solid var(--primary);
+      margin-top: 10px;
+    }
     nav {
       background: var(--primary);
       padding: 1rem;
@@ -135,9 +152,14 @@
 <body>
 
 <header>
-  <!-- Replace logo.png with your uploaded logo file -->
-  <img src="logo.png" alt="Senior Digital Literacy Logo" />
-  <h1>Senior Digital Literacy – Albert County</h1>
+<div class="header-list">
+    <!-- Replace logo.png with your uploaded logo file -->
+  <img src="logo.jpg" alt="Senior Digital Literacy Logo" />
+ <div class="header-hero-wrapper">
+   <h1>Senior Digital Literacy - Free service</h1>
+  <p>Albert County, New Brunswick</p>
+ </div>
+</div>
 </header>
 
 <nav>
@@ -199,7 +221,7 @@
     Coordinator: Natalie Trahan
   </p>
   <p>
-    <strong>Email:</strong> <a href="mailto:SeniorsDigialLiteracy@proton.me">SeniorsDigialLiteracy@proton.me</a><br />
+    <strong>Email:</strong> <a href="mailto:SeniorDigitalLiteracy@proton.me">SeniorDigitalLiteracy@proton.me</a><br />
     <strong>Address:</strong> 250 Academy St, Hillsborough, New Brunswick
   </p>
   <p>
