@@ -224,6 +224,10 @@ footer {
   }
 }
 @media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
   section {
     margin-left: 20px !important;
     margin-right: 20px !important;
