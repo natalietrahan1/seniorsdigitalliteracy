@@ -76,14 +76,18 @@ nav a:hover {
 
 section:not(.contact) {
   max-width: 1000px;
-  margin: auto;
-  padding: 3rem 1.5rem;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
 }
 
 .hero {
   background: var(--white);
   text-align: center;
   display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--bs-gray-200);
+  border-radius: 16px;
+  margin-top: 40px !important;
 }
 .hero div {
   width: 50%;
@@ -123,25 +127,52 @@ section:not(.contact) {
   margin-top: 2rem;
 }
 
-.card {
+.card-box {
   background: var(--white);
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--bs-gray-200);
+  display: flex;
+  flex-direction: column;
 }
-.card div {
+.card-box div {
   display: flex;
   justify-content: center;
   height: 75%;
+  margin: auto;
 }
-.card img {
+.card-box img {
   max-width: 100%;
   height: auto;
 }
 
-.card h3 {
+.card-box h3 {
   margin-top: 0;
   color: var(--primary);
+}
+.card-box div:first-of-type {
+  display: flex;
+  margin: unset;
+}
+.card-box div:last-of-type {
+  display: block;
+}
+.card-box button {
+  margin-top: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.card-box button:hover,
+.button:hover {
+  background-color: var(--light-bg);
+  cursor: pointer;
+  color: var(--primary);
+  border: 1px solid var(--primary);
 }
 .contact {
   background-color: var(--light-bg);
@@ -155,7 +186,7 @@ section:not(.contact) {
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  margin: auto;
+  margin: 40px auto 0 auto;
   padding: 20px;
 }
 .contact section {
@@ -192,8 +223,29 @@ footer {
     text-align: center;
   }
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (max-width: 900px) {
   .hero {
-    flex-direction: row;
+    flex-direction: column;
+  }
+  .hero div {
+    width: 100%;
+  }
+  .card-box {
+    flex-direction: row !important;
+    padding: unset;
+  }
+  .card-box div {
+    height: auto;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .card-box div:last-of-type {
+    padding-right: 20px;
+  }
+  .contact div:not(.social) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
