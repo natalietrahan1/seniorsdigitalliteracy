@@ -13,24 +13,29 @@
         <div class="header-list">
             <img src="assets/logo2.png" alt="Senior Digital Literacy Logo" />
             <div class="header-hero-wrapper">
-                <h1>Programs & Events</h1>
-                <p>Senior Digital Literacy – Albert County</p>
+                <h1>Senior Digital Literacy</h1>
+                <p> Free service for Seniors of Albert County, New Brunswick</p>
+
             </div>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html#about">About our program</a>
-        <a href="index.html#services">Services</a>
-        <a href="programs.html">Programs & Events</a>
-        <a href="resources.html">Resources</a>
-        <a href="index.html#contact">Contact us</a>
+    <nav class="site-nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
+            <span class="nav-toggle-icon" aria-hidden="true"></span>
+            <span class="nav-toggle-text">Menu</span>
+        </button>
+        <div id="site-nav-links" class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs & Events</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#contact">Contact us</a>
+        </div>
     </nav>
 
-    <section id="programs">
+    <section id="programs" role="region" aria-label="Our Programs">
         <h2>Our Programs</h2>
         <div class="program-details">
-
             <div id="computer-basics" class="program-card">
                 <h3>Computer Basics</h3>
                 <p><strong>What you'll learn:</strong> How to use your computer easily for everyday tasks.</p>
@@ -60,13 +65,105 @@
                     <li>Shopping and banking online securely.</li>
                 </ul>
             </div>
-
         </div>
     </section>
-    <section id="whatToBring">
+
+    <section id="curriculum" role="region" aria-label="Curriculum">
+        <h2>Curriculum</h2>
+        <div class="curriculum-tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="Curriculum weeks">
+                <button class="tab-button" type="button" role="tab" id="tab-week-1" aria-controls="panel-week-1" aria-selected="true">
+                    <h3>Week 1: Device Basics & Connection</h3>
+                </button>
+                <button class="tab-button" type="button" role="tab" id="tab-week-2" aria-controls="panel-week-2" aria-selected="false">
+                    <h3>Week 2: Email & Messaging</h3>
+                </button>
+                <button class="tab-button" type="button" role="tab" id="tab-week-3" aria-controls="panel-week-3" aria-selected="false">
+                    <h3>Week 3: Safe Internet Use</h3>
+                </button>
+                <button class="tab-button" type="button" role="tab" id="tab-week-4" aria-controls="panel-week-4" aria-selected="false">
+                    <h3>Week 4: Online Security & Privacy</h3>
+                </button>
+                <button class="tab-button" type="button" role="tab" id="tab-week-5" aria-controls="panel-week-5" aria-selected="false">
+                    <h3>Week 5: Everyday Device Use</h3>
+                </button>
+                <button class="tab-button" type="button" role="tab" id="tab-week-6" aria-controls="panel-week-6" aria-selected="false">
+                    <h3>Week 6: Connecting & Wrap-up</h3>
+                </button>
+            </div>
+
+            <label class="tab-select-label" for="curriculum-select">Choose a week</label>
+            <select id="curriculum-select" class="tab-select" aria-label="Choose a week">
+                <option value="panel-week-1">Week 1: Device Basics & Connection</option>
+                <option value="panel-week-2">Week 2: Email & Messaging</option>
+                <option value="panel-week-3">Week 3: Safe Internet Use</option>
+                <option value="panel-week-4">Week 4: Online Security & Privacy</option>
+                <option value="panel-week-5">Week 5: Everyday Device Use</option>
+                <option value="panel-week-6">Week 6: Connecting & Wrap-up</option>
+            </select>
+
+            <div class="tab-panel" role="tabpanel" id="panel-week-1" aria-labelledby="tab-week-1">
+                <p><strong>Objective</strong>: Participants will feel comfortable turning on their device, navigating its basic interface, and connecting to the internet.</p>
+                <ul>
+                    <li><strong>Introduction:</strong> What is a computer/smartphone? Basic components. Turning devices on/off.</li>
+                    <li><strong>Navigating the Interface:</strong> Touchscreen gestures (tap, swipe, pinch), mouse & keyboard basics, understanding icons and menus.</li>
+                    <li><strong>Connectivity:</strong> Connecting to Wi-Fi networks, understanding mobile data.</li>
+                    <li><strong>Basic Settings:</strong> Adjusting screen brightness, volume, font size.</li>
+                    <li><strong>Power & Care:</strong> Charging devices, battery life tips.</li>
+                </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" id="panel-week-2" aria-labelledby="tab-week-2" hidden>
+                <p><strong>Objective</strong>: Participants will be able to send and receive emails and messages, and manage their contacts.</p>
+                <ul>
+                    <li><strong>Email Basics:</strong> Setting up an email account, composing, sending, receiving, replying, forwarding.</li>
+                    <li><strong>Texting (SMS/MMS):</strong> Sending and receiving text messages on a smartphone.</li>
+                    <li><strong>Messaging Apps:</strong> Introduction to apps (e.g., WhatsApp), sending messages, photos, voice notes.</li>
+                    <li><strong>Managing Contacts:</strong> Adding, editing, and finding contacts.</li>
+                </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" id="panel-week-3" aria-labelledby="tab-week-3" hidden>
+                <p><strong>Objective</strong>: Participants will be able to navigate the internet to find information and understand the importance of online safety.</p>
+                <ul>
+                    <li><strong>What is the Internet?:</strong> How to open and use a web browser.</li>
+                    <li><strong>Searching for Information:</strong> Using search engines (e.g., Google), effective search terms.</li>
+                    <li><strong>Understanding Websites:</strong> Identifying reliable sources, recognizing different types of websites.</li>
+                    <li><strong>Introduction to Online Safety:</strong> Why safety is crucial, understanding basic risks.</li>
+                </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" id="panel-week-4" aria-labelledby="tab-week-4" hidden>
+                <p><strong>Objective</strong>: Participants will be equipped to identify common online threats and take steps to protect their personal information.</p>
+                <ul>
+                    <li><strong>Recognizing Common Scams:</strong> Phishing emails, suspicious phone calls, fake links.</li>
+                    <li><strong>Strong Passwords:</strong> Creating and managing secure passwords.</li>
+                    <li><strong>Online Privacy:</strong> Understanding what information you share, basic privacy settings.</li>
+                    <li><strong>Secure Online Transactions:</strong> Safe practices for online banking and shopping.</li>
+                </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" id="panel-week-5" aria-labelledby="tab-week-5" hidden>
+                <p><strong>Objective</strong>: Participants will be able to use their devices for practical tasks like managing photos, getting directions, and finding information.</p>
+                <ul>
+                    <li><strong>Photos & Videos:</strong> Taking, viewing, organizing, and deleting media.</li>
+                    <li><strong>Maps & Navigation:</strong> Using map applications to find locations and get directions.</li>
+                    <li><strong>Accessing Information:</strong> Reading news, checking weather, finding local services online.</li>
+                    <li><strong>Introduction to Apps:</strong> What are apps? How to download and uninstall them safely from app stores.</li>
+                </ul>
+            </div>
+            <div class="tab-panel" role="tabpanel" id="panel-week-6" aria-labelledby="tab-week-6" hidden>
+                <p><strong>Objective</strong>: Participants will be able to connect with others via video calls, feel more confident troubleshooting basic issues, and know where to find further resources.</p>
+                <ul>
+                    <li><strong>Video Calls:</strong> Using platforms like WhatsApp, FaceTime, or Facebook Messenger to connect with family and friends.</li>
+                    <li><strong>Review & Consolidation:</strong> Recap of key skills learned throughout the course.</li>
+                    <li><strong>Troubleshooting Common Issues:</strong> Simple fixes for slow devices, frozen apps, connectivity problems.</li>
+                    <li><strong>Useful Online Resources:</strong> Exploring helpful websites for hobbies, health, etc.</li>
+                    <li><strong>Course Wrap-up:</strong> Open Q&A, certificate presentation, and encouragement for continued learning.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="whatToBring" role="region" aria-label="What you need to bring">
         <h2>What you need to bring</h2>
         <p>   To make the most of your session, please bring:</p>
-
         <ul>
             <li> <strong>Your device:</strong> Your smartphone, tablet, or laptop that you wish to learn on.</li>
             <li>
@@ -81,12 +178,12 @@
             </li>
             <li> <strong>    Any questions you have:</strong> Don't hesitate to bring your specific curiosities or challenges!</li>
         </ul>
-
     </section>
-    <section id="events">
+
+    <section id="events" role="region" aria-label="Upcoming Events">
         <h2>Upcoming Events</h2>
         <p>All sessions are free and open to seniors in Albert County. Please arrive 10 minutes early.</p>
-        <h4>Stay tuned....</h4>
+        <p>Stay tuned....</p>
 
         <table class="events-table">
             <thead>
@@ -126,5 +223,7 @@
             Free community support for seniors
         </p>
     </footer>
+    <script src="assets/programs.js"></script>
+
 </body>
 </html>
