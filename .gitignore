@@ -1,0 +1,13 @@
+# Ignore build output
+bin/
+obj/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore IDE specific files
+.DS_Store
+.vs/
