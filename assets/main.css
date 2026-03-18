@@ -560,7 +560,15 @@ form input, textarea {
       margin-bottom: 40px;
       flex-direction: column;
       display: flex;
+      overflow: hidden;
     }
+
+      .hero img {
+        position: relative;           
+        width: 100%;
+        margin: unset;
+        border-radius: 0;
+      }
 
 
     section:not(#contact):not(#volunteer):not(.contact):not(.hero):not(.quote) {
