@@ -1,0 +1,25 @@
+# Enable the rewrite engine
+RewriteEngine On
+
+# Rule 1: Redirect explicit .html URLs to clean URLs (e.g., /about.html -> /about)
+# This ensures that if someone bookmarks or links to an old .html URL,
+# they are redirected to the clean version.
+# It checks if the requested file ending in .html exists.
+# If it does, it redirects the browser to the same path without the .html extension.
+# [R=301] means a permanent redirect.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)\.html$ $1 [R=301,L]
+
+# Rule 2: Serve pages without .html extension by appending .html internally
+# If the request is NOT for an existing file or directory,
+# try to append '.html' and serve it.
+# Example: Request for '/about' will internally rewrite to '/about.html'
+# The browser's address bar will still show '/about'.
+# The [L] flag means this is the last rule to be processed for this request.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
+
+# Rule 3: Handle directory indexes (e.g., yourwebsite.com/products/ should serve products/index.html)
+# This ensures that requests for directories correctly serve index.html
+DirectoryIndex index.html index.htm
