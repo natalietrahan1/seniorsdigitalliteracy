@@ -49,4 +49,25 @@ document.addEventListener("DOMContentLoaded", () => {
   if (initialButton) {
     activateTab(initialButton.getAttribute("aria-controls"));
   }
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://seniorsdigitalliteracy.ca/",
+    "logo": "https://seniorsdigitalliteracy.ca/assets/logo2.png",
+    "name": "Senior Digital Literacy",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "seniorsdigitalliteracy@proton.me",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/18aBp6LEHC/"
+    ]
+  };
+
+  const structuredDataScript = document.createElement("script");
+  structuredDataScript.type = "application/ld+json";
+  structuredDataScript.textContent = JSON.stringify(structuredData);
+  document.head.appendChild(structuredDataScript);
 });
